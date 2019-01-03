@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<student>
+    <id>1</id>
+    <lessons>
+        <lesson>
+            <id>1</id>
+            <name>Calculus</name>
+            <teacher>
+                <id>1</id>
+                <name>Gilbert</name>
+                <surname>Strang</surname>
+            </teacher>
+        </lesson>
+        <lesson>
+            <id>3</id>
+            <name>Data Structures</name>
+            <teacher>
+                <id>2</id>
+                <name>Harrison</name>
+                <surname>Wiedmann</surname>
+            </teacher>
+        </lesson>
+        <lesson>
+            <id>4</id>
+            <name>Algorithms</name>
+            <teacher>
+                <id>2</id>
+                <name>Harrison</name>
+                <surname>Wiedmann</surname>
+            </teacher>
+        </lesson>
+    </lessons>
+    <name>John</name>
+    <surname>Doe</surname>
+</student>
