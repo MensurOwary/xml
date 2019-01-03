@@ -33,7 +33,7 @@ Rules to follow:
  | & quot;	     | "             |
  
  
- ##Attributes
+ ## Attributes
  ````xml
 <person gender="female">
   <firstname>Anna</firstname>
@@ -41,7 +41,7 @@ Rules to follow:
 </person>
 ````
 
- Standalone attribute
+ #### Standalone attribute
 
 ``<xml standalone="yes/no">``
 
@@ -49,7 +49,7 @@ Rules to follow:
 
 *As an example, consider the humble <img> tag. If you look at the XHTML 1.0 DTD, you see a markup declaration telling the parser that <img> tags must be EMPTY and possess src and alt attributes. When a browser is going through an XHTML 1.0 document and finds an <img> tag, it should notice that the DTD requires src and alt attributes and add them if they are not present. It will also self-close the <img> tag since it is supposed to be EMPTY. This is what the XML specification means by "markup declarations can affect the content of the document." You can then use the standalone declaration to tell the parser to ignore these rules.*
 
- ##Namespaces
+ ## Namespaces
  Namespaces are used to differentiate between 2 tags with the same name by adding a namespace before them - ``<namespace:tagname/>``. Before doing so,
  a namespace must be declared either in the beginning of the document (or parent) or in the tag itself. Namespaces are specified with a URI.
  
@@ -85,7 +85,7 @@ xmlns:f="https://www.w3schools.com/furniture">
 </root>
 ```
 
-#XPath
+## XPath
 Given an XML code
 
 ### Absolute Path
