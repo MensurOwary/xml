@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?> <!--Prolog of the xml document-->
+<!--
+
+Definition of a schema
+
+xmlns:nameOfNamespace - refers to the location of the namespace definition, URI won't matter
+targetNamespace       - the targetNamespace declares a namespace for other xml and xsd documents to refer to this schema.
+xmlns:nameOfNamespace - the target prefix in this case refers to the same namespace and you would use it within
+                        this schema definition to reference other elements, attributes, types, etc. also defined
+                        in this same schema definition
+elementFormDefault    - ?
+
+-->
+<xs:schema
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="https://www.owary.com/xml/superhero"
+        xmlns:superhero="https://www.owary.com/xml/superhero"
+        elementFormDefault="qualified">
+    <!--Declaration of the root element-->
+    <xs:element name="Superhero" type="superhero:Superhero"/>
+
+    <!--Actual declaration of the type-->
+    <xs:complexType name="Superhero">
+        <!--sequence means the tags must appear in the exact order they are defined-->
+        <xs:sequence>
+            <!--
+                name    - How the name will appear as a tag
+                type    - Data type
+            -->
+            <xs:element name="Alias"    type="xs:string"/>
+            <xs:element name="AlterEgo" type="xs:string"/>
+            <xs:element name="Team"     type="xs:string"/>
+            <xs:element name="Height"   type="xs:double"/>
+            <xs:element name="Birth"    type="xs:date"/>
+            <xs:element name="Gender"   type="xs:string"/>
+            <!--Complex type as a tag-->
+            <xs:element name="Superpowers">
+                <xs:complexType>
+                    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                        <xs:element name="Superpower" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+
+
+
+</xs:schema>
