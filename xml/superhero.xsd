@@ -27,12 +27,12 @@ elementFormDefault    - ?
                 name    - How the name will appear as a tag
                 type    - Data type
             -->
-            <xs:element name="Alias"    type="xs:string"/>
+            <xs:element name="Alias"    type="superhero:ValidAlias"/>
             <xs:element name="AlterEgo" type="xs:string"/>
             <xs:element name="Team"     type="xs:string"/>
             <xs:element name="Height"   type="xs:double"/>
             <xs:element name="Birth"    type="xs:date"/>
-            <xs:element name="Gender"   type="xs:string"/>
+            <xs:element name="Gender"   type="superhero:ValidGender"/>
             <!--Complex type as a tag-->
             <xs:element name="Superpowers">
                 <xs:complexType>
@@ -45,6 +45,21 @@ elementFormDefault    - ?
         </xs:sequence>
     </xs:complexType>
 
+    <!--To put restrictions we utilize simpleType-->
+    <xs:simpleType name="ValidAlias">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9]+"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--Enumeration means the value can be one of those, not anything else-->
+    <xs:simpleType name="ValidGender">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="M"></xs:enumeration>
+            <xs:enumeration value="F"></xs:enumeration>
+            <xs:enumeration value="O"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
 
 
 </xs:schema>
