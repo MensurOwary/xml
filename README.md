@@ -100,6 +100,7 @@ It is faster than the relative path since it doesn't search
 - ``/root/child[not(position()=1)]`` does the same thing as the previous one
 - ``/root/child[last()]`` selects the last child node
 - ``parent/child`` selects all the "child" nodes which are direct descendants of "parent" node
+- ``/parent/child[text()]`` selects the text content of all the "child" nodes
 - ``/*`` selects the root element regardless of the name
 - ``./child`` selects all the child elements of the current node. ``./`` indicates the current(or currently being processed) node
 
