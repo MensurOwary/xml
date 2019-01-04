@@ -1,20 +1,23 @@
 <sup:Superhero xmlns:sup="https://www.owary.com/xml/superhero">
-  <sup:Alias>Aquaman</sup:Alias>
-  <sup:AlterEgo>Arthur Curry</sup:AlterEgo>
-  <sup:Team>Justice League</sup:Team>
-  <sup:Height>1.85</sup:Height>
-  <sup:Birth>1941-11-15</sup:Birth>
-  <sup:Gender>M</sup:Gender>
-  <sup:Superpowers>
-    <sup:Superpower>Enhanced Hearing</sup:Superpower>
-    <sup:Superpower>Enhanced Senses</sup:Superpower>
-    <sup:Superpower>Enhanced Sight</sup:Superpower>
-    <sup:Superpower>Heat Resistance</sup:Superpower>
-    <sup:Superpower>Sonar</sup:Superpower>
-    <sup:Superpower>Stealth</sup:Superpower>
-    <sup:Superpower>Super Speed</sup:Superpower>
-    <sup:Superpower>Super Strength</sup:Superpower>
-    <sup:Superpower>Underwater breathing</sup:Superpower>
-    <sup:Superpower>Water Control</sup:Superpower>
-  </sup:Superpowers>
+    <sup:Alias>Aquaman</sup:Alias>
+    <sup:AlterEgo>Arthur Curry</sup:AlterEgo>
+    <sup:Teams>
+        <sup:Team>Justice League</sup:Team>
+        <sup:Team>Justice Society of America</sup:Team>
+    </sup:Teams>
+    <sup:Height>1.85</sup:Height>
+    <sup:Birth>1941-11-15</sup:Birth>
+    <sup:Gender>M</sup:Gender>
+    <sup:Superpowers>
+        <sup:Superpower>Enhanced Hearing</sup:Superpower>
+        <sup:Superpower>Enhanced Senses</sup:Superpower>
+        <sup:Superpower>Enhanced Sight</sup:Superpower>
+        <sup:Superpower>Heat Resistance</sup:Superpower>
+        <sup:Superpower>Sonar</sup:Superpower>
+        <sup:Superpower>Stealth</sup:Superpower>
+        <sup:Superpower>Super Speed</sup:Superpower>
+        <sup:Superpower>Super Strength</sup:Superpower>
+        <sup:Superpower>Underwater breathing</sup:Superpower>
+        <sup:Superpower>Water Control</sup:Superpower>
+    </sup:Superpowers>
 </sup:Superhero>

@@ -27,9 +27,11 @@ elementFormDefault    - ?
                 name    - How the name will appear as a tag
                 type    - Data type
             -->
+            <!--We can use already declared simpleType as data type-->
             <xs:element name="Alias"    type="superhero:ValidAlias"/>
             <xs:element name="AlterEgo" type="xs:string"/>
-            <xs:element name="Team"     type="xs:string"/>
+            <!--We can use already declared complexType as data type-->
+            <xs:element name="Teams"    type="superhero:Teams"/>
             <xs:element name="Height"   type="xs:double"/>
             <xs:element name="Birth"    type="xs:date"/>
             <xs:element name="Gender"   type="superhero:ValidGender"/>
@@ -48,18 +50,23 @@ elementFormDefault    - ?
     <!--To put restrictions we utilize simpleType-->
     <xs:simpleType name="ValidAlias">
         <xs:restriction base="xs:string">
-            <xs:pattern value="[a-zA-Z0-9]+"></xs:pattern>
+            <xs:pattern value="[a-zA-Z0-9]+"/>
         </xs:restriction>
     </xs:simpleType>
 
     <!--Enumeration means the value can be one of those, not anything else-->
     <xs:simpleType name="ValidGender">
         <xs:restriction base="xs:string">
-            <xs:enumeration value="M"></xs:enumeration>
-            <xs:enumeration value="F"></xs:enumeration>
-            <xs:enumeration value="O"></xs:enumeration>
+            <xs:enumeration value="M"/>
+            <xs:enumeration value="F"/>
+            <xs:enumeration value="O"/>
         </xs:restriction>
     </xs:simpleType>
 
-
+    <!--Declare and use complexTypes-->
+    <xs:complexType name="Teams">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="Team" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
 </xs:schema>
