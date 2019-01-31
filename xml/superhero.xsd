@@ -8,7 +8,7 @@ targetNamespace       - the targetNamespace declares a namespace for other xml a
 xmlns:nameOfNamespace - the target prefix in this case refers to the same namespace and you would use it within
                         this schema definition to reference other elements, attributes, types, etc. also defined
                         in this same schema definition
-elementFormDefault    - ?
+elementFormDefault    - it tells the XML file tags should have their namespace prepended to them (qualified), otherwise (unqualified)
 
 -->
 <xs:schema
@@ -45,9 +45,18 @@ elementFormDefault    - ?
             </xs:element>
 
         </xs:sequence>
+
+        <!--To add an attribute, we do the following-->
+        <xs:attribute name="id" type="superhero:ValidId"/>
     </xs:complexType>
 
     <!--To put restrictions we utilize simpleType-->
+    <xs:simpleType name="ValidId">
+        <xs:restriction base="xs:int">
+            <xs:pattern value="[0-9]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="ValidAlias">
         <xs:restriction base="xs:string">
             <xs:pattern value="[a-zA-Z0-9]+"/>

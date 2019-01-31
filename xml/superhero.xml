@@ -1,4 +1,4 @@
-<sup:Superhero xmlns:sup="https://www.owary.com/xml/superhero">
+<sup:Superhero xmlns:sup="https://www.owary.com/xml/superhero" id="1">
     <sup:Alias>Aquaman</sup:Alias>
     <sup:AlterEgo>Arthur Curry</sup:AlterEgo>
     <sup:Teams>
